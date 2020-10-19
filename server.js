@@ -24,13 +24,10 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 //END_ASYNC
 
 //START_SYNC
-var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
-console.log(hash); 
+let hash = bcrypt.hashSync(myPlaintextPassword, saltRounds)
 
-var result = bcrypt.compareSync(myPlaintextPassword, hash);
-console.log(result); 
+let result = bcrypt.compareSync(myPlaintextPassword, hash)
 
-//END_SYNC
-
+//END_SYNC 
 
 app.listen(process.env.PORT || 3000, () => {});
